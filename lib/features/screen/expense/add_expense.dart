@@ -54,6 +54,8 @@ class _AddExpenseState extends State<AddExpense> {
     },
   ];
 
+  double amountVal = 0.09;
+
   @override
   Widget build(BuildContext context) {
     var media = MediaQuery.sizeOf(context);
@@ -92,7 +94,7 @@ class _AddExpenseState extends State<AddExpense> {
                         ],
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
@@ -172,7 +174,6 @@ class _AddExpenseState extends State<AddExpense> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ImageButton(image: tMinus, onPressed: () {}),
-                  ImageButton(image: tPlus, onPressed: () {}),
                   Column(
                     children: [
                       Text(
@@ -184,8 +185,26 @@ class _AddExpenseState extends State<AddExpense> {
                               fontWeight: FontWeight.w600),
                         ),
                       ),
+
+                      const SizedBox(height: 4,),
+                      Text(
+                        "\u20B9${amountVal.toStringAsFixed(2)}",
+                        style: GoogleFonts.inter(
+                          textStyle: TextStyle(
+                              color: Colors.white.withOpacity(0.8),
+                              fontSize: 40,
+                              fontWeight: FontWeight.w700),
+                        ),
+                      ),
+                      const SizedBox(height: 4,),
+                      Container(
+                        width: 150,
+                        height: 1,
+                        color: AppColor.grey60,
+                      ),
                     ],
                   ),
+                  ImageButton(image: tPlus, onPressed: () {}),
                 ],
               ),
             ),

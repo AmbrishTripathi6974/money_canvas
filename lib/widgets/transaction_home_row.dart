@@ -38,7 +38,7 @@ class TransactionHomeRow extends StatelessWidget {
                 child: Text(
                   sObj["name"],
                   style: GoogleFonts.inter(
-                    textStyle: TextStyle(
+                    textStyle: const TextStyle(
                         fontSize: 12,
                         color: Colors.white,
                         fontWeight: FontWeight.w600),
@@ -51,7 +51,7 @@ class TransactionHomeRow extends StatelessWidget {
               Text(
                 "- \u20B9${sObj["price"]}",
                 style: GoogleFonts.inter(
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                       fontSize: 12,
                       color: Colors.red,
                       fontWeight: FontWeight.w600),
