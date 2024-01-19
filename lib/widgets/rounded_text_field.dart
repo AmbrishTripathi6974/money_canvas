@@ -3,11 +3,12 @@ import 'package:google_fonts/google_fonts.dart';
 
 class RoundTextField extends StatelessWidget {
   final String title;
+  final Color color;
   final TextEditingController? controller;
   final TextInputType? keyboardType;
   final bool obscureText;
   const RoundTextField(
-      {super.key, required this.title, this.controller, this.keyboardType, this.obscureText = false});
+      {super.key, required this.title,required this.color, this.controller, this.keyboardType, this.obscureText = false});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class RoundTextField extends StatelessWidget {
           style: GoogleFonts.cambay(
             textStyle: TextStyle(
               fontSize: 14,
-              color: Colors.black.withOpacity(0.5),
+              color: color.withOpacity(0.5),
             ),
           ),
         ),

@@ -42,12 +42,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 title: "Username",
                 controller: txtUserName,
                 keyboardType: TextInputType.name,
+                color: Colors.black,
               ),
               const SizedBox(height: 10),
               RoundTextField(
                 title: "Email address",
                 controller: txtEmail,
                 keyboardType: TextInputType.emailAddress,
+                color: Colors.black,
               ),
               const SizedBox(height: 10),
               RoundTextField(
@@ -55,6 +57,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 controller: txtPassword,
                 keyboardType: TextInputType.visiblePassword,
                 obscureText: true,
+                color: Colors.black,
               ),
               const Spacer(),
               Row(

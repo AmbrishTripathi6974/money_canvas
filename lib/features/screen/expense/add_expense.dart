@@ -5,6 +5,7 @@ import 'package:money_canvas/common/colors.dart';
 import 'package:money_canvas/common/image_string.dart';
 import 'package:money_canvas/widgets/image_button.dart';
 import 'package:money_canvas/widgets/primary_btn.dart';
+import 'package:money_canvas/widgets/rounded_text_field.dart';
 
 class AddExpense extends StatefulWidget {
   const AddExpense({super.key});
@@ -14,6 +15,7 @@ class AddExpense extends StatefulWidget {
 }
 
 class _AddExpenseState extends State<AddExpense> {
+  TextEditingController txtDescription = TextEditingController();
   bool isTransaction = true;
   List transArr = [
     {
@@ -54,7 +56,7 @@ class _AddExpenseState extends State<AddExpense> {
     },
   ];
 
-  double amountVal = 0.09;
+  double amountVal = 0.00;
 
   @override
   Widget build(BuildContext context) {
@@ -169,11 +171,25 @@ class _AddExpenseState extends State<AddExpense> {
               )),
             ),
             Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+              child: RoundTextField(title: "Description",controller: txtDescription,color: Colors.white,),
+            ),
+            Padding(
               padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  ImageButton(image: tMinus, onPressed: () {}),
+                  ImageButton(
+                      image: tMinus,
+                      onPressed: () {
+                        amountVal -= 10;
+
+                        if (amountVal < 0) {
+                          amountVal = 0;
+                        }
+
+                        setState(() {});
+                      }),
                   Column(
                     children: [
                       Text(
@@ -185,8 +201,9 @@ class _AddExpenseState extends State<AddExpense> {
                               fontWeight: FontWeight.w600),
                         ),
                       ),
-
-                      const SizedBox(height: 4,),
+                      const SizedBox(
+                        height: 4,
+                      ),
                       Text(
                         "\u20B9${amountVal.toStringAsFixed(2)}",
                         style: GoogleFonts.inter(
@@ -196,7 +213,9 @@ class _AddExpenseState extends State<AddExpense> {
                               fontWeight: FontWeight.w700),
                         ),
                       ),
-                      const SizedBox(height: 4,),
+                      const SizedBox(
+                        height: 4,
+                      ),
                       Container(
                         width: 150,
                         height: 1,
@@ -204,7 +223,12 @@ class _AddExpenseState extends State<AddExpense> {
                       ),
                     ],
                   ),
-                  ImageButton(image: tPlus, onPressed: () {}),
+                  ImageButton(
+                      image: tPlus,
+                      onPressed: () {
+                        amountVal += 10;
+                        setState(() {});
+                      }),
                 ],
               ),
             ),
