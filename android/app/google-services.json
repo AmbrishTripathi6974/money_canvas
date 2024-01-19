@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "300246618291",
+    "project_id": "money-canvas",
+    "storage_bucket": "money-canvas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300246618291:android:cf2bcb674474048a9f20c6",
+        "android_client_info": {
+          "package_name": "com.example.money_canvas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300246618291-u4rkrdsbeqbodbn1e5o5dfen7udcabvr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNVChXNfKaQl83iwyyDgvNM9UVLglRqmE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "300246618291-u4rkrdsbeqbodbn1e5o5dfen7udcabvr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

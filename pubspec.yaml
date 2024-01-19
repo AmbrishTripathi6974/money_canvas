@@ -24,6 +24,7 @@ dependencies:
   flutter_native_splash: ^2.3.9
   google_fonts: ^6.1.0
   carousel_slider: ^4.2.1
+  google_sign_in: ^6.2.1
 
  # -------- BASIC DEV DEPENDENCIES -------- #
  
