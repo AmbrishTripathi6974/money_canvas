@@ -4,25 +4,34 @@ import 'package:google_fonts/google_fonts.dart';
 class RoundTextField extends StatelessWidget {
   final String title;
   final Color color;
+  final TextAlign titleAlign;
   final TextEditingController? controller;
   final TextInputType? keyboardType;
   final bool obscureText;
   const RoundTextField(
-      {super.key, required this.title,required this.color, this.controller, this.keyboardType, this.obscureText = false});
+      {super.key, required this.title,required this.color,this.titleAlign = TextAlign.left, this.controller, this.keyboardType, this.obscureText = false});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          title,
-          style: GoogleFonts.cambay(
-            textStyle: TextStyle(
-              fontSize: 14,
-              color: color.withOpacity(0.5),
+        
+        Row(
+          children: [
+            Expanded(
+              child: Text(
+                title,
+                textAlign: titleAlign,
+                style: GoogleFonts.cambay(
+                  textStyle: TextStyle(
+                    fontSize: 14,
+                    color: color.withOpacity(0.7),
+                  ),
+                ),
+              ),
             ),
-          ),
+          ],
         ),
         const SizedBox(
           height: 4,

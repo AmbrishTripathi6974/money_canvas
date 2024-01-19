@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:money_canvas/common/colors.dart';
 import 'package:money_canvas/common/image_string.dart';
+import 'package:money_canvas/features/screen/home/main_tab_view.dart';
 import 'package:money_canvas/widgets/image_button.dart';
 import 'package:money_canvas/widgets/primary_btn.dart';
 import 'package:money_canvas/widgets/rounded_text_field.dart';
@@ -85,7 +86,9 @@ class _AddExpenseState extends State<AddExpense> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
                             icon: Image.asset(
                               tBack,
                               width: 25,
@@ -171,8 +174,13 @@ class _AddExpenseState extends State<AddExpense> {
               )),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-              child: RoundTextField(title: "Description",controller: txtDescription,color: Colors.white,),
+              padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
+              child: RoundTextField(
+                title: "Description",
+                titleAlign: TextAlign.center,
+                controller: txtDescription,
+                color: Colors.white,
+              ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
@@ -237,7 +245,9 @@ class _AddExpenseState extends State<AddExpense> {
               child: PrimaryButton(
                   title: "Add Expense",
                   color: AppColor.secondary,
-                  onPressed: () {}),
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const MainTabView()));
+                  }),
             ),
             const SizedBox(
               height: 20,
