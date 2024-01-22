@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "300246618291-u4rkrdsbeqbodbn1e5o5dfen7udcabvr.apps.googleusercontent.com",
+          "client_id": "300246618291-s5kmohou2bn3hu53oin39qk4sikmh9d6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.money_canvas",
+            "certificate_hash": "ff30c91e837746613cfb35e3041b8d5ac92b8d81"
+          }
+        },
+        {
+          "client_id": "300246618291-thqvhgholrabc68q2ov06nj90uenh83b.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,8 +35,15 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "300246618291-u4rkrdsbeqbodbn1e5o5dfen7udcabvr.apps.googleusercontent.com",
+              "client_id": "300246618291-thqvhgholrabc68q2ov06nj90uenh83b.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "300246618291-72lavsg1ln6b8detos2g4nldqimtr0p7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.moneyCanvas.RunnerTests"
+              }
             }
           ]
         }

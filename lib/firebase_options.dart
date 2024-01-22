@@ -67,6 +67,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '300246618291',
     projectId: 'money-canvas',
     storageBucket: 'money-canvas.appspot.com',
+    androidClientId: '300246618291-s5kmohou2bn3hu53oin39qk4sikmh9d6.apps.googleusercontent.com',
     iosClientId: '300246618291-i7shd42gm4ds6jnof71ia5mbsoupmd02.apps.googleusercontent.com',
     iosBundleId: 'com.example.moneyCanvas',
   );
@@ -77,6 +78,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '300246618291',
     projectId: 'money-canvas',
     storageBucket: 'money-canvas.appspot.com',
+    androidClientId: '300246618291-s5kmohou2bn3hu53oin39qk4sikmh9d6.apps.googleusercontent.com',
     iosClientId: '300246618291-72lavsg1ln6b8detos2g4nldqimtr0p7.apps.googleusercontent.com',
     iosBundleId: 'com.example.moneyCanvas.RunnerTests',
   );

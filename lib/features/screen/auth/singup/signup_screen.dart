@@ -6,6 +6,8 @@ import 'package:money_canvas/features/screen/home/main_tab_view.dart';
 import 'package:money_canvas/widgets/primary_btn.dart';
 import 'package:money_canvas/widgets/rounded_text_field.dart';
 
+import 'auth_service.dart';
+
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
 
@@ -25,7 +27,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const WelcomeScreen()));
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => const WelcomeScreen()));
           },
         ),
         title: const Text("Sign Up"),
@@ -133,7 +136,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 title: "Sign Up",
                 color: const Color.fromARGB(255, 0, 140, 255),
                 onPressed: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const MainTabView()));
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MainTabView()));
                 },
               ),
               const Padding(
@@ -141,7 +147,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 child: Text("or with"),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () => AuthService().signInWithGoogle(),
+                // onTap: () {
+                //   Navigator.push(
+                //     context,
+                //     MaterialPageRoute(builder: (context) => const MainTabView()),
+                //   );
+                // },
                 child: Container(
                   height: 50,
                   padding: const EdgeInsets.all(16),
